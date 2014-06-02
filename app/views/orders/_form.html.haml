@@ -1,0 +1,9 @@
+= form_for @order do |f|
+
+
+  = f.fields_for :order_items do |builder|
+
+    = builder.collection_select :pizza_type_id, @pizza_types, :id, :name
+    = builder.text_field :quantity
+
+  = f.submit

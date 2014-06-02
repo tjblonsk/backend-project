@@ -1,0 +1,9 @@
+%h1 Orders
+
+%ul
+  - @orders.each do |o|
+
+    %li= o.id
+
+
+= link_to 'Create', new_order_path
